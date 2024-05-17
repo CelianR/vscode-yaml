@@ -36,7 +36,8 @@ jobs:
         run: |
             echo Custom dependencies
             yarn remove yaml-language-server
-            yarn add https://github.com/CelianR/yaml-language-server.git#celianr/gitlab-jump-to-definition
+            # yarn add https://github.com/CelianR/yaml-language-server.git#celianr/gitlab-jump-to-definition
+            yarn add ssh://git@github.com:redhat-developer/yaml-language-server.git
             yarn
 
       # Build extension
