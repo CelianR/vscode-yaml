@@ -33,7 +33,9 @@ jobs:
 
       # Run install dependencies
       - name: Install dependencies
-        run: yarn
+        run: |
+            echo Custom dependencies
+            yarn
 
       # Build extension
       - name: Run build
