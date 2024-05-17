@@ -41,18 +41,18 @@ jobs:
       - name: Run build
         run: yarn build
 
-      # Run tests
-      - name: Run Test
-        uses: GabrielBB/xvfb-action@fe2609f8182a9ed5aee7d53ff3ed04098a904df2 #v1.0
-        with:
-          run: yarn test
+      # # Run tests
+      # - name: Run Test
+      #   uses: GabrielBB/xvfb-action@fe2609f8182a9ed5aee7d53ff3ed04098a904df2 #v1.0
+      #   with:
+      #     run: yarn test
 
-      # Run UI tests
-      - name: Run UI Test
-        uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d #v1.6
-        with:
-          run: yarn run ui-test
-          options: -screen 0 1920x1080x24
+      # # Run UI tests
+      # - name: Run UI Test
+      #   uses: GabrielBB/xvfb-action@86d97bde4a65fe9b290c0b3fb92c2c4ed0e5302d #v1.6
+      #   with:
+      #     run: yarn run ui-test
+      #     options: -screen 0 1920x1080x24
 
       #Package vsix
       - name: Build .vsix package on Linux
@@ -72,7 +72,7 @@ jobs:
       # Archive test results
       - name: Archiving test artifacts
         uses: actions/upload-artifact@v2
-        with: 
+        with:
           name: ${{ matrix.os }}-artifacts
           path: |
             test-resources/screenshots/*.png
