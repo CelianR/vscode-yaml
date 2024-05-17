@@ -35,6 +35,8 @@ jobs:
       - name: Install dependencies
         run: |
             echo Custom dependencies
+            yarn remove yaml-language-server
+            yarn add https://github.com/CelianR/yaml-language-server.git#gitlab-jump-to-definition
             yarn
 
       # Build extension
